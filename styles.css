@@ -1,0 +1,738 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: none;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --darkgray: #333333;
+    --mediumgray: #e6e6e6;
+    --lightgray: #f2f2f2;
+}
+
+body {
+    font-family: 'Inter', serif;
+    font-weight: 300;
+    color: var(--darkgray);
+    line-height: 1.6;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+menu,
+ol,
+ul {
+    padding-left: 0;
+}
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+          scroll-behavior: smooth;
+    }
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.topbar {
+    border-bottom: var(--lightgray) 3px solid;
+    padding: 0vw min(2vw, 50px);
+}
+
+.topnav {
+    padding: 0.8rem 0rem 0rem 0rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 3rem;
+    min-width: 5rem;
+    margin: 0rem 1rem 0rem 0.5rem;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.searchbar {
+    border-radius: 3rem;
+    border: var(--darkgray) solid 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.searchbar:not(.active) {
+    background-color: var(--lightgray);
+}
+
+.searchbar.active {
+    background-color: white;
+}
+
+.searchbar input {
+    width: 100%;
+    background-color: inherit;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    margin: 0.8rem 0rem 0.8rem 0.8rem;
+}
+
+.searchicon {
+    height: 3.1rem;
+    min-width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.searchbar:not(.active) .searchicon:hover {
+    background-color: var(--mediumgray);
+    color: var(--darkgray);
+}
+
+.searchbar.active .searchicon {
+    background-color: var(--darkgray);
+    color: white;
+}
+
+.searchicon svg {
+    height: 1.5rem;
+}
+
+.cart {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.cart:hover {
+    background-color: var(--mediumgray);
+}
+
+.cart svg {
+    height: 1.5rem;
+}
+
+.signin {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    min-width: 5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 2rem;
+    transition: 500ms ease;
+}
+
+.signin:hover {
+    background-color: var(--mediumgray);
+}
+
+.linkslist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem;
+    margin: 0px;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.toplink {
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.toplink a {
+    padding: 1rem 0.5rem;
+    transition: opacity 300ms;
+}
+
+.toplink a:hover {
+    opacity: 0.7;
+    border-bottom: 2px black solid;
+}
+
+.contentbody {
+}
+
+.topsplash {
+}
+
+.splashbackground {
+    position: absolute;
+    width: 100%;
+    height: 11rem;
+    background-color: #f8ebe6;
+    z-index: -1;
+}
+
+.serifheading {
+    font-family: 'Bitter', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.flexgrid {
+    display: flex;
+    justify-content: center;
+}
+
+.gridcontainer {
+    margin: 1rem 0rem;
+    display: grid;
+}
+
+.griditem {
+    max-width: 8rem;
+    margin: 0rem 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid white;
+}
+
+.gridimage {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition: 200ms ease;
+}
+
+.griditem:hover {
+    border-bottom: 3px solid var(--mediumgray);
+}
+
+.griditem:hover .gridlabel {
+    color: var(--darkgray);
+}
+
+.griditem:hover .gridimage {
+    box-shadow: 0px 0px 8px 6px var(--mediumgray);
+    transform: scale(1.1);
+}
+
+.popular {
+    padding: 2rem;
+}
+
+.sansheader {
+    padding: 0rem 0rem 0.5rem 0.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.listings {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.listing {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.listing:hover {
+    box-shadow: 0px 0px 4px 4px var(--mediumgray);
+}
+
+.listingimage {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.listingimage img {
+    object-fit: cover;
+    width: 100%;
+    height: 12rem;
+}
+
+.likebutton {
+    opacity: 0;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    transition: 300ms ease;
+}
+
+.listing:hover .likebutton,
+.mdgrid:hover .likebutton {
+    opacity: 1;
+    top: 1rem;
+}
+
+.listinglabel {
+    font-weight: 500;
+    padding-top: 0.3rem;
+}
+
+.reviews {
+    font-size: 0.8rem;
+}
+
+.newprice {
+    font-weight: 800;
+}
+
+.oldprice {
+    color: darkgreen;
+    font-size: 0.9rem;
+}
+
+.shipping {
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: inline;
+    border-radius: 2rem;
+    padding: 0.1rem 0.3rem;
+    background-color: #d4e9d7;
+}
+
+.mothersday {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.mothersdaygrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.75fr 1.25fr;
+    grid-template-rows: 18rem 22rem;
+    gap: 1.5rem;
+}
+
+.mdgrid {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.flexcenter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mdgrid1 .heading1 {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.mdgrid1 .heading2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.mdgrid1 .heading3 {
+    font-weight: 500;
+    padding: 0.5rem 0rem;
+    cursor: pointer;
+}
+
+.mdgrid1 .heading3 span {
+    margin-left: 0.3rem;
+    transition: 300ms ease;
+}
+
+.mdgrid1 .heading3:hover span {
+    margin-left: 0.6rem;
+}
+
+.floatingprice {
+    opacity: 0;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0rem;
+    left: 1rem;
+    transition: 300ms ease;
+    font-weight: 400;
+}
+
+.mdgrid:hover .floatingprice {
+    opacity: 1;
+    bottom: 1rem;
+}
+
+.mdgrid img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+}
+
+.footerimg {
+    width: 100%;
+}
+
+.footerpink {
+    background-color: #fdebd2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerpink h1 {
+    font-size: 3rem;
+    padding-bottom: 0rem;
+}
+
+a.readstory {
+    text-decoration: underline;
+}
+
+.pargrid {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.pargrid1,
+.pargrid2,
+.pargrid3 {
+    max-width: 33%;
+}
+
+.parheader {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+h3.blurb {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.helpcenter {
+    background-color: #fdebd2;
+    border-radius: 3rem;
+    padding: 0.6rem 1rem;
+    border: var(--darkgray) solid 2px;
+    font-size: 1rem;
+    margin: 0.5rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline dotted 1px;
+    cursor: help;
+}
+
+.tooltip .tooltiptext {
+    font-size: 0.8rem;
+    visibility: hidden;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px var(--darkgray);
+    color: var(--darkgray);
+    text-align: left;
+    border-radius: 6px;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -150px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid;
+    border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext ul {
+    list-style: inside;
+}
+
+.footerlb {
+    background: #d7e6f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+.emailbar {
+    border-radius: 3rem;
+    border: var(--darkgray) solid 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.emailbar input {
+    width: 100%;
+    background-color: inherit;
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 0.6rem 0rem 0.6rem 1.2rem;
+}
+
+.emailicon {
+    height: 3.1rem;
+    min-width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 500ms ease;
+    font-weight: 500;
+}
+
+.emailbar:not(.active) .emailicon:hover {
+    background-color: var(--mediumgray);
+    color: var(--darkgray);
+}
+
+.emailbar.active .emailicon {
+    background-color: var(--darkgray);
+    color: white;
+}
+
+.subscribe {
+    width: 30rem;
+    margin: 1rem 2rem 0rem 2rem;
+}
+
+.footerlb h4 {
+    font-weight: 500;
+}
+
+.footermb {
+    background-color: #4d6bc6;
+    padding-bottom: 1rem;
+}
+
+.tooltip2 {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.footerdb {
+    background-color: #2f466c;
+    padding: 1.5rem 2.5rem;
+    color: white;
+}
+
+.bottomgrid {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+}
+
+.links {
+    line-height: 2rem;
+    min-width: 25%;
+}
+
+.links li {
+    font-size: 0.8rem;
+}
+
+.links h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.etsyappbutton {
+    background: none;
+    border-radius: 3rem;
+    border: 2px white solid;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    color: inherit;
+    margin-top: 2rem;
+}
+
+.applogo {
+    background-color: white;
+    color: #2f466c;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    padding: 0.1rem 0.2rem 0.1rem 0.3rem;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem 0rem;
+}
+
+.socials img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.socials span::before {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    opacity: 0;
+    background-color: var(--mediumgray);
+    transform: scale(0) translate(-12%, -12%);
+    transition: 300ms ease;
+}
+
+.socials span:hover::before {
+    opacity: 0.5;
+    transform: scale(1) translate(-12%, -12%);
+}
+
+.footerpurple {
+    background-color: #232347;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang {
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.lang:hover {
+    background-color: #323267;
+}
+
+.lang img {
+    height: 25px;
+    width: 25px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.lang span {
+    width: 100%;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+.cr {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.cr a {
+    margin-left: 1rem;
+}

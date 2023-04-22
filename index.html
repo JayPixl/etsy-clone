@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon-32x32.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Etsy Clone by Joshua Lawrence</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="topbar">
+            <div class="topnav">
+                <div class="logo">
+                    <img src="images/Etsy-Logo.png" alt="Etsy Logo" />
+                </div>
+                <div class="searchbar">
+                    <input class= 'searchinput' type="text" placeholder="Search for anything" />
+                    <span class="searchicon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="signin">
+                    <a href="#">Sign In</a> 
+                </div>
+                <div class="cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="toplinks">
+                <nav>
+                    <ul class="linkslist">
+                        <li class="toplink">
+                            <a href="#">Home Favorites</a> 
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Jewelry & Accessories</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Clothing & Shoes</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Home & Living</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Wedding & Party</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Toys & Entertainment</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Art & Collectibles</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Craft Supplies</a>
+                        </li>
+                        <li class="toplink">
+                            <a href="#">Gifts & Gift Cards</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="contentbody">
+            <main>
+                <section class="topsplash">
+                    <div class="splashbackground"></div>
+                    <h1 class="serifheading">Shower them with extra-special gifts.</h1>
+                    <div class="flexgrid">
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/6841042/c/1024/1024/0/0/il/e7597d/3912828889/il_300x300.3912828889_7al8.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Mother's Day Gifts
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/19750099/c/672/672/0/0/il/073cf2/4163911823/il_300x300.4163911823_3qu6.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Personalized Jewelry
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/6734380/r/il/4ddd33/3165103255/il_300x300.3165103255_onhs.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Home Decor & Gifts
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/6515718/r/il/12c2bd/3990269772/il_300x300.3990269772_ikyr.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Outdoor Decor
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/6739878/c/2850/2850/75/0/il/dc83c9/4711488168/il_300x300.4711488168_4kh4.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Wedding Decor & Gifts
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gridcontainer">
+                            <div class="griditem">
+                                <div class="gridimage">
+                                    <img src="https://i.etsystatic.com/13869225/c/1850/1850/434/173/il/25a89d/4236152087/il_300x300.4236152087_1llm.jpg" alt="Mother's Day Gifts">
+                                </div>
+                                <div class="gridlabel">
+                                    Gifts on Sale
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="popular">
+                    <h1 class="sansheader">
+                        Popular gifts right now
+                    </h1>
+                    <div class="listings">
+                        <div class="listing">
+                            <div class="likebutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>                                  
+                            </div>
+                            <div class="listingimage">
+                                <img src="https://i.etsystatic.com/34269816/r/il/f9cc97/4040914287/il_340x270.4040914287_lzjb.jpg" alt="cutting board wedding gift">
+                            </div>
+                            <div class="listinglabel">
+                                Personalized Cutting Board Wedding Gift, Customize you...
+                            </div>
+                            <div class="rating">
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+                                <span class="reviews">
+                                    (2,842)
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="newprice">
+                                    $36.95
+                                </span>
+                                <span class="oldprice">
+                                    <del>$61.59</del> (40% off)
+                                </span>
+                            </div>
+                            <div class="shipping">FREE shipping</div>
+                        </div>
+                        <div class="listing">
+                            <div class="likebutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>                                  
+                            </div>
+                            <div class="listingimage">
+                                <img src="https://i.etsystatic.com/23702777/r/il/14c918/4184624086/il_340x270.4184624086_s698.jpg" alt="birth flower jewelry travel case">
+                            </div>
+                            <div class="listinglabel">
+                                Birth Flower Jewelry Travel Case, Birth Month Flower Gift...
+                            </div>
+                            <div class="rating">
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+                                <span class="reviews">
+                                    (15,992)
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="newprice">
+                                    $9.95
+                                </span>
+                                <span class="oldprice">
+                                    <del>$19.90</del> (50% off)
+                                </span>
+                            </div>
+                            <div class="shipping">FREE shipping</div>
+                        </div>
+                        <div class="listing">
+                            <div class="likebutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>                                  
+                            </div>
+                            <div class="listingimage">
+                                <img src="https://i.etsystatic.com/14647199/r/il/07ef6a/3336462729/il_794xN.3336462729_dzs1.jpg" alt="personal name necklace">
+                            </div>
+                            <div class="listinglabel">
+                                Personalized Name Necklace, Gift for Her, Peronsalized Gift...
+                            </div>
+                            <div class="rating">
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+                                <span class="reviews">
+                                    (7,415)
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="newprice">
+                                    $48.00
+                                </span>
+                                <span class="oldprice">
+                                    <del>$120.00</del> (60% off)
+                                </span>
+                            </div>
+                            <div class="shipping">FREE shipping</div>
+                        </div>
+                        <div class="listing">
+                            <div class="likebutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>                                  
+                            </div>
+                            <div class="listingimage">
+                                <img src="https://i.etsystatic.com/24303637/c/775/616/0/149/il/ff8d9d/4476404866/il_340x270.4476404866_lhf4.jpg" alt="hand embroidered corner bookmark">
+                            </div>
+                            <div class="listinglabel">
+                                Personalized Hand Embroidered Corner Bookma...
+                            </div>
+                            <div class="rating">
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+                                <span class="reviews">
+                                    (1,282)
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="newprice">
+                                    $12.99
+                                </span>
+                            </div>
+                            <div class="shipping">FREE shipping</div>
+                        </div>
+                        <div class="listing">
+                            <div class="likebutton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>                                  
+                            </div>
+                            <div class="listingimage">
+                                <img src="https://i.etsystatic.com/21882344/c/2380/1892/284/590/il/f06f50/4620121616/il_340x270.4620121616_mw4s.jpg" alt="wedding calendar ornament">
+                            </div>
+                            <div class="listinglabel">
+                                Married Ornament, Wedding Gift, Wedding Date ornamen...
+                            </div>
+                            <div class="rating">
+                                <span class="stars">
+                                    ★★★★★
+                                </span>
+                                <span class="reviews">
+                                    (11,500)
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="newprice">
+                                    $14.95
+                                </span>
+                                <span class="oldprice">
+                                    <del>$14.95</del> (50% off)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mothersday">
+                    <div class="mothersdaygrid">
+                        <div class="mdgrid1 mdgrid">
+                            <div class="flexcenter">
+                                <div class="heading1">Editor's Picks</div>
+                                <div class="heading2">Mother's Day Gifts 2023</div>
+                                <div class="heading3">Shop these unique finds<span class="arrowbutton">➔</span></div>
+                            </div>
+                        </div>
+                        <div class="mdgrid2 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $25.00                                
+                                </div>
+                                <img src="https://i.etsystatic.com/6588137/r/il/737903/3021989716/il_680x540.3021989716_bvw3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid3 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $18.00                                
+                                </div>
+                                <img src="https://i.etsystatic.com/5768875/c/1754/1394/277/89/il/af2a26/4040555653/il_680x540.4040555653_45ky.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid4 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $8.28                            
+                                </div>
+                                <img src="https://i.etsystatic.com/15605620/r/il/d25b7c/4029212960/il_680x540.4029212960_2oxd.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid5 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $15.00                           
+                                </div>
+                                <img src="https://i.etsystatic.com/6748817/r/il/acc7e2/2933109654/il_680x540.2933109654_nsxp.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid6 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $290.00                            
+                                </div>
+                                <img src="https://i.etsystatic.com/9374302/r/il/b688a5/3266279171/il_680x540.3266279171_2odf.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid7 mdgrid">
+                            <a href="#">
+                                <div class="likebutton">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>                                  
+                                </div>
+                                <div class="floatingprice">
+                                    $21.97                          
+                                </div>
+                                <img src="https://i.etsystatic.com/12201809/c/1280/1017/0/246/il/b66994/4579112734/il_680x540.4579112734_qnmx.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="mdgrid8 mdgrid">
+                            <div class="flexcenter">
+                                <div class="p">Make her day with one-of-a-kind presents that show your love all year long.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="footer">
+                    <img class="footerimg" src="images/layered-peaks-haikei.svg" alt="footer image">
+                    <footer>
+                        <div class="footerpink">
+                            <h1 class="serifheading">What is Etsy?</h1>
+                            <a class="readstory" href="#">Read our wonderfully weird story.</a>
+                            <div class="pargrid">
+                                <div class="pargrid1">
+                                    <h2 class="parheader">A community doing good</h2>
+                                    <div class="info">
+                                        Etsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We&#39;re also a community pushing for positive change for small businesses, people, and the planet.
+                                        <div class="tooltip">
+                                            Here are some of the ways we&#39;re making a positive impact, together.
+                                            <span class="tooltiptext">
+                                                <ul>
+                                                    <li>Your purchases on Etsy in 2020 generated nearly $4 billion in income for small businesses.</li>
+                                                    <li>We advocate for policy—at the global and local level—that benefits creative entrepreneurs and helps small businesses grow and thrive.</li>
+                                                    <li>We are deepening our commitment to a sustainable future and are working towards a new goal to reach net zero emissions by 2030.</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pargrid2">
+                                    <h2 class="parheader">Support independent creators</h2>
+                                    <p class="info">There&#39;s no Etsy warehouse &#45; just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
+                                </div>
+                                <div class="pargrid3">
+                                    <h2 class="parheader">Peace of mind</h2>
+                                    <p class="info">Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
+                                </div>
+                            </div>
+                            <h3 class="blurb">
+                                Have a question? Well, we've got some answers.
+                            </h3>
+                            <button class="helpcenter">Go to Help Center</button>
+                        </div>
+                        <img src="images/layered-peaks-haikei2.svg" alt="footer img" class="footerimg">
+                        <div class="footerlb">
+                            <h4>Yes! Send me exclusive offers, unique gift ideas, and personalized tips for shopping and selling on Etsy.</h4>
+                            <div class="subscribe">
+                                <div class="emailbar">
+                                    <input class= 'emailinput' type="text" placeholder="Enter Your Email" />
+                                    <span class="emailicon">
+                                        Subscribe
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="images/layered-peaks-haikei3.svg" alt="footer img" class="footerimg">
+                        <div class="footermb">
+                            <div class="tooltip tooltip2">
+                                Etsy is powered by 100% renewable electricity.
+                                <span class="tooltiptext">
+                                    Etsy&#39;s 100% renewable electricity commitment includes the electricity used by the data centers that host Etsy.com, the Sell on Etsy app, and the Etsy app, as well as the electricity that powers Etsy&#39;s global offices and employees working remotely from home in the US.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="footerdb">
+                            <div class="bottomgrid">
+                                <div class="links">
+                                    <h3>Shop</h3>
+                                    <ul>
+                                        <li><a href="#">Gift cards</a></li>
+                                        <li><a href="#">Sitemap</a></li>
+                                        <li><a href="#">Etsy blog</a></li>
+                                        <li><a href="#">Etsy United Kingdom</a></li>
+                                        <li><a href="#">Etsy Germany</a></li>
+                                        <li><a href="#">Gift Canada</a></li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <h3>Sell</h3>
+                                    <ul>
+                                        <li><a href="#">Sell on Etsy</a></li>
+                                        <li><a href="#">Teams</a></li>
+                                        <li><a href="#">Forums</a></li>
+                                        <li><a href="#">Affiliates & Creators</a></li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <h3>About</h3>
+                                    <ul>
+                                        <li><a href="#">Etsy, Inc.</a></li>
+                                        <li><a href="#">Policies</a></li>
+                                        <li><a href="#">Investors</a></li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">Press</a></li>
+                                        <li><a href="#">Impact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="links">
+                                    <h3>Help</h3>
+                                    <ul>
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="#">Privacy Settings</a></li>
+                                    </ul>
+                                    <button class="etsyappbutton">
+                                        <span class="applogo">
+                                            E
+                                        </span> 
+                                        Download the Etsy App!
+                                    </button>
+                                    <div class="socials">
+                                        <span class="insta">
+                                            <img src="images/instagram-logo-bold-svgrepo-com.svg" alt="">
+                                        </span>
+                                        <span class="facebook">
+                                            <img src="images/facebook-svgrepo-com.svg" alt="">
+                                        </span>
+                                        <span class="pinterest">
+                                            <img src="images/pinterest-180-svgrepo-com.svg" alt="">
+                                        </span>
+                                        <span class="twitter">
+                                            <img src="images/twitter-154-svgrepo-com.svg" alt="">
+                                        </span>
+                                        <span class="youtube">
+                                            <img src="images/youtube-168-svgrepo-com.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footerpurple">
+                            <div class="lang">
+                                <img src="images/united-states-of-america-united-states-svgrepo-com.svg" alt="">
+                                <span>United States | English (US) | $ (USD)</span> 
+                            </div>
+                            <div class="cr">
+                                <span>&copy; 2023 Etsy, Inc.</span>
+                                <a href="#">Terms of Use</a>
+                                <a href="#">Privacy</a>
+                                <a href="#">Internet-ased ads</a>
+                                <a href="#">Local Shops</a>
+                                <a href="#">Regions</a>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script type="application/javascript" src="index.js"></script>
+</body>
+</html>
