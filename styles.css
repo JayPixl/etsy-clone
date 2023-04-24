@@ -81,13 +81,11 @@ a:hover {
 
 .topbar {
     border-bottom: var(--lightgray) 3px solid;
-    padding: 0vw min(2vw, 50px);
 }
 
 .topnav {
-    padding: 0.8rem 0rem 0rem 0rem;
+    padding: 0.8rem min(2vw, 50px);
     width: 100%;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -102,6 +100,15 @@ a:hover {
 
 .logo img {
     height: 100%;
+}
+
+.responsivenav {
+    display: none;
+    padding: 0rem min(2vw, 50px);
+}
+
+.responsivenav .searchbar {
+    margin-bottom: 1rem;
 }
 
 .searchbar {
@@ -190,7 +197,8 @@ a:hover {
     background-color: var(--mediumgray);
 }
 
-.linkslist {
+.linkslist ul {
+    padding: 0rem min(2vw, 50px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -198,6 +206,10 @@ a:hover {
     margin: 0px;
     font-size: 0.8rem;
     font-weight: 300;
+}
+
+.xbutton {
+    display: none;
 }
 
 .toplink {
@@ -212,7 +224,6 @@ a:hover {
 
 .toplink a:hover {
     opacity: 0.7;
-    border-bottom: 2px black solid;
 }
 
 .contentbody {
@@ -242,13 +253,18 @@ a:hover {
     justify-content: center;
 }
 
+.splashgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .gridcontainer {
     margin: 1rem 0rem;
-    display: grid;
 }
 
 .griditem {
     max-width: 8rem;
+    height: 100%;
     margin: 0rem 1.5rem;
     cursor: pointer;
     text-align: center;
@@ -256,18 +272,19 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid transparent;
 }
 
 .gridimage {
     border-radius: 50%;
     overflow: hidden;
+    width: 100%;
     margin-bottom: 1rem;
     transition: 200ms ease;
 }
 
 .griditem:hover {
-    border-bottom: 3px solid var(--mediumgray);
+    border-bottom: 3px solid var(--darkgray);
 }
 
 .griditem:hover .gridlabel {
@@ -398,19 +415,20 @@ a:hover {
     font-weight: 500;
 }
 
-.mdgrid1 .heading3 {
+.mdgrid .heading3 {
     font-weight: 500;
     padding: 0.5rem 0rem;
     cursor: pointer;
 }
 
-.mdgrid1 .heading3 span {
+.heading3 .arrowbutton {
+    display: inline-block;
     margin-left: 0.3rem;
     transition: 300ms ease;
 }
 
-.mdgrid1 .heading3:hover span {
-    margin-left: 0.6rem;
+.heading3:hover .arrowbutton {
+    transform: translate(10px);
 }
 
 .floatingprice {
@@ -622,6 +640,7 @@ h3.blurb {
     flex-direction: row;
     width: 100%;
     text-align: left;
+    flex-wrap: wrap;
 }
 
 .links {
@@ -636,6 +655,10 @@ h3.blurb {
 .links h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.downbutton {
+    display: none;
 }
 
 .etsyappbutton {
@@ -661,14 +684,15 @@ h3.blurb {
 
 .socials {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     padding: 1rem 0rem;
+    width: 100%;
 }
 
 .socials img {
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -682,13 +706,13 @@ h3.blurb {
     border-radius: 20px;
     opacity: 0;
     background-color: var(--mediumgray);
-    transform: scale(0) translate(-12%, -12%);
+    transform: scale(0) translate(-15%, -15%);
     transition: 300ms ease;
 }
 
 .socials span:hover::before {
     opacity: 0.5;
-    transform: scale(1) translate(-12%, -12%);
+    transform: scale(1) translate(-15%, -15%);
 }
 
 .footerpurple {
@@ -704,6 +728,7 @@ h3.blurb {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding: 0.5rem 0.8rem;
     border-radius: 2rem;
     cursor: pointer;
@@ -735,4 +760,293 @@ h3.blurb {
 
 .cr a {
     margin-left: 1rem;
+}
+
+
+@media (max-width: 930px) {
+
+    .responsivenav {
+        z-index: 3;
+        position: relative;
+    }
+
+    .responsivenav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .responsivenav .searchbar {
+        margin: 0;
+    }
+
+    .hamburger {
+        height: 2rem;
+        width: 2rem;
+        margin: 1rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    .hamburger:hover {
+        background-color: var(--lightgray);
+    }
+
+    .topnav .searchbar {
+        visibility: hidden;
+    }
+
+    .xbutton {
+        display: flex;
+        cursor: pointer;
+        height: 2rem;
+        width: 2.2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+    }
+
+    .xbutton:hover {
+        background-color: var(--mediumgray);
+    }
+
+    .linkslist ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .linkslist {
+        background-color: var(--lightgray);
+        width: 100%;
+        position: absolute;
+        margin: 0;
+        display: none; /* flex */
+        flex-direction: row;
+        z-index: 2;
+    }
+
+    .covering.active {
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 500%;
+    }
+
+    .linkslist.active {
+        display: flex;
+    }
+
+    .splashgrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .splashbackground {
+        height: 27rem;
+    }
+
+    .listings {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mothersdaygrid {
+        grid-template-rows: 10rem 14rem;
+        gap: 1rem;
+    }
+
+    .links {
+        width: 50%;
+        margin: 1rem 0rem;
+    }
+
+    .footerpurple {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        height: 2.5rem;
+    }
+
+    .searchinput {
+        margin: 0rem;
+    }
+
+    .responsivenav {
+        margin-bottom: 0.5rem;
+    }
+
+    .topnav {
+        padding: 0.5rem;
+    }
+
+    .hamburger {
+        margin: 0.5rem;
+    }
+
+    .splashgrid {
+        grid-template-columns: 1fr 1fr;
+        margin: 0rem 1rem;
+    }
+
+    .griditem {
+        max-width: 6rem;
+        font-size: 0.9rem;
+    }
+
+    .topsplash .serifheading {
+        font-size: 1.8rem;
+    }
+
+    .splashbackground {
+        height: 40rem;
+    }
+
+    .listings {
+        grid-template-columns: 1fr;
+        max-width: 18rem;
+    }
+
+    .listingimage {
+        max-height: 10rem;
+    }
+
+    .popular {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mothersdaygrid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 6rem 10rem 8rem 4rem;
+        gap: 0.6rem;
+    }
+
+    .mdgrid1 {
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+
+    .mdgrid1 .heading3 {
+        display: none;
+    }
+
+    .mdgrid8 {
+        display: none;
+    }
+
+    .mdgrid9 {
+        grid-column: 1 / span 3;
+        text-align: center;
+        padding: 0px 15vw;
+    }
+
+    .links {
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    .footerpurple {
+        flex-direction: column;
+    }
+
+    .links h3 {
+        display: inline;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .links ul {
+        visibility: hidden;
+        margin-top: 0.5rem;
+        text-align: center;
+        position: absolute;
+        opacity: 0;
+        transform: translateY(-3rem);
+        display: block;
+        transition: opacity 300ms ease, transform 300ms ease;
+    }
+
+    .links.active ul {
+        visibility: visible;
+        position: relative;
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    .lang span {
+        font-size: 0.8rem;
+    }
+
+    .socials {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .socials span::before {
+        transform: scale(0) translate(-50%, -15%);
+        transform-origin: center;
+    }
+    
+    .socials span:hover::before {
+        transform: scale(1) translate(-50%, -15%);
+    }
+
+    .header {
+        border-bottom: 2px white solid;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .downbutton {
+        display: inline;
+        position: absolute;
+        padding: 0.5rem 0.5rem 0rem 0.5rem;
+        right: 0.5rem;
+    }
+
+    .pargrid {
+        flex-direction: column;
+    }
+
+    .pargrid div {
+        max-width: 100%;
+    }
+
+    .footerlb h4 {
+        font-size: 1rem;
+        padding: 0rem 0.5rem;
+    }
+
+    h3.blurb {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .subscribe {
+        padding: 0px 0.5rem;
+    }
+
+    .emailicon {
+        padding: 0.5rem;
+    }
+
+    .footermb {
+        font-size: 0.9rem;
+    }
+
+
+
 }

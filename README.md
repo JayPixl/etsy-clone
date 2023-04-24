@@ -2,6 +2,7 @@
 
 - built using static HTML, CSS, and JavaScript
 
-- not responsive
+- now fully responsive
 
 > First commit: 4/22/23
+> Second commit: 4/23/23
