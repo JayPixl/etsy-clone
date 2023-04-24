@@ -148,6 +148,7 @@ a:hover {
     cursor: pointer;
     transition: 500ms ease;
     -webkit-transition: 500ms ease;
+    transform: scale(1.1);
 }
 
 .searchbar:not(.active) .searchicon:hover {
@@ -811,15 +812,18 @@ h3.blurb {
     }
 
     .xbutton {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
         display: flex;
         cursor: pointer;
         height: 2rem;
         width: 2.2rem;
         justify-content: center;
         align-items: center;
-        margin: 1rem;
         font-size: 1.2rem;
         border-radius: 2rem;
+        font-weight: 600;
     }
 
     .xbutton:hover {
@@ -919,7 +923,7 @@ h3.blurb {
     }
 
     .splashbackground {
-        height: 40rem;
+        height: 38rem;
     }
 
     .listings {
