@@ -511,6 +511,7 @@ h3.blurb {
 
 .helpcenter {
     background-color: #fdebd2;
+    color: var(--darkgray);
     border-radius: 3rem;
     padding: 0.6rem 1rem;
     border: var(--darkgray) solid 2px;
