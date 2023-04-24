@@ -17,9 +17,9 @@ function loadNavAnimations() {
         headers[i].addEventListener('click', e => {
             links[i].classList.toggle('active');
             if (links[i].classList.contains('active')) {
-                downbuttons[i].innerHTML = '&#708;'
+                downbuttons[i].innerHTML = '⏶'
             } else {
-                downbuttons[i].innerHTML = '&#709;'
+                downbuttons[i].innerHTML = '⏷'
             }
         })
     }
