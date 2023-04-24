@@ -985,6 +985,7 @@ h3.blurb {
         position: absolute;
         opacity: 0;
         transform: translateY(-3rem);
+        -webkit-transform: translateY(-3rem);
         display: block;
         transition: opacity 300ms ease, transform 300ms ease;
         -webkit-transition: opacity 300ms ease, transform 300ms ease;
@@ -994,6 +995,7 @@ h3.blurb {
         visibility: visible;
         position: relative;
         transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
         opacity: 1;
     }
 
