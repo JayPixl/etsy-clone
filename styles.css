@@ -147,6 +147,7 @@ a:hover {
     align-items: center;
     cursor: pointer;
     transition: 500ms ease;
+    -webkit-transition: 500ms ease;
 }
 
 .searchbar:not(.active) .searchicon:hover {
@@ -171,6 +172,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     transition: 500ms ease;
+    -webkit-transition: 500ms ease;
     cursor: pointer;
 }
 
@@ -191,6 +193,7 @@ a:hover {
     padding: 0.8rem;
     border-radius: 2rem;
     transition: 500ms ease;
+    -webkit-transition: 500ms ease;
 }
 
 .signin:hover {
@@ -220,6 +223,7 @@ a:hover {
 .toplink a {
     padding: 1rem 0.5rem;
     transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
 }
 
 .toplink a:hover {
@@ -281,6 +285,7 @@ a:hover {
     width: 100%;
     margin-bottom: 1rem;
     transition: 200ms ease;
+    -webkit-transition: 200ms ease;
 }
 
 .griditem:hover {
@@ -344,6 +349,7 @@ a:hover {
     top: 2rem;
     right: 1rem;
     transition: 300ms ease;
+    -webkit-transition: 300ms ease;
 }
 
 .listing:hover .likebutton,
@@ -425,6 +431,7 @@ a:hover {
     display: inline-block;
     margin-left: 0.3rem;
     transition: 300ms ease;
+    -webkit-transition: 300ms ease;
 }
 
 .heading3:hover .arrowbutton {
@@ -440,6 +447,7 @@ a:hover {
     bottom: 0rem;
     left: 1rem;
     transition: 300ms ease;
+    -webkit-transition: 300ms ease;
     font-weight: 400;
 }
 
@@ -536,6 +544,7 @@ h3.blurb {
     margin-left: -150px;
     opacity: 0;
     transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
@@ -596,6 +605,7 @@ h3.blurb {
     align-items: center;
     cursor: pointer;
     transition: 500ms ease;
+    -webkit-transition: 500ms ease;
     font-weight: 500;
 }
 
@@ -708,6 +718,7 @@ h3.blurb {
     background-color: var(--mediumgray);
     transform: scale(0) translate(-15%, -15%);
     transition: 300ms ease;
+    -webkit-transition: 300ms ease;
 }
 
 .socials span:hover::before {
@@ -976,6 +987,7 @@ h3.blurb {
         transform: translateY(-3rem);
         display: block;
         transition: opacity 300ms ease, transform 300ms ease;
+        -webkit-transition: opacity 300ms ease, transform 300ms ease;
     }
 
     .links.active ul {
