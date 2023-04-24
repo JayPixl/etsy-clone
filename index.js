@@ -16,7 +16,11 @@ function loadNavAnimations() {
     for (let i=0; i<links.length; i++) {
         headers[i].addEventListener('click', e => {
             links[i].classList.toggle('active');
-            links[i].classList.contains('active') ? downbuttons[i].innerHTML = '&#708;' : downbuttons[i].innerHTML = '&#709;';
+            if (links[i].classList.contains('active')) {
+                downbuttons[i].innerHTML = '&#708;'
+            } else {
+                downbuttons[i].innerHTML = '&#709;'
+            }
         })
     }
 
