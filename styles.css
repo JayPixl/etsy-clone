@@ -1027,8 +1027,10 @@ h3.blurb {
     .downbutton {
         display: inline;
         position: absolute;
-        padding: 0.5rem 0.5rem 0rem 0.5rem;
+        font-weight: 600;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
         right: 0.5rem;
+        bottom: -0.5rem;
     }
 
     .pargrid {

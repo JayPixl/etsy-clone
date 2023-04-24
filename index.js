@@ -11,9 +11,12 @@ function loadNavAnimations() {
     }
 
     const links = document.getElementsByClassName('links');
+    const headers = document.getElementsByClassName('header');
+    const downbuttons = document.getElementsByClassName('downbutton');
     for (let i=0; i<links.length; i++) {
-        links[i].addEventListener('click', e => {
+        headers[i].addEventListener('click', e => {
             links[i].classList.toggle('active');
+            links[i].classList.contains('active') ? downbuttons[i].innerHTML = '&#708;' : downbuttons[i].innerHTML = '&#709;';
         })
     }
 
